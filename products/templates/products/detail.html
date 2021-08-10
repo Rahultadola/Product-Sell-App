@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{object.title}}
+{% endblock %}
+
+{% block content %}
+
+<h1>{{ object.title |title}}</h1>
+<p>{{ object.description }}</p>
+<h3>{{ object.price}}</h3>
+<p>{{ object.sold }}</p>
+<p>{{ object.date_reg|date:"D d M Y" }}</p>
+<p>{{ object.user }}</p>
+<img src={{ object.descrip_image.url }}>
+<p>___________________________________________________________________________<p>
+{{ object }}
+
+
+{% endblock %}
